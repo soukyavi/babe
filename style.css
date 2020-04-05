@@ -13,7 +13,7 @@ html, body, .wrapper {
 }
 
 body {
-  background-color: #1b1b2f;
+  background: linear-gradient(120deg, #1b1b2f, #121220);
 }
 
 @-webkit-keyframes play120 {
@@ -74,9 +74,10 @@ h1, h2 {
 }
 
 h1 {
+  opacity: 0;
   font-size: 7rem;
-  animation: opacity1 3s infinite;
-  -webkit-animation: opacity1 3s infinite;
+  animation: opacity2 3s 1.5s infinite;
+  -webkit-animation: opacity2 3s 1.5s infinite;
 }
 
 h2 {
@@ -139,7 +140,7 @@ h2 {
   50% {
     opacity: 1;
   }
-  100% {
+  70% {
     opacity: 0;
   }
 }
@@ -154,7 +155,7 @@ h2 {
   50% {
     opacity: 1;
   }
-  100% {
+  70% {
     opacity: 0;
   }
 }
