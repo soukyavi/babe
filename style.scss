@@ -1,3 +1,13 @@
+$colors: (
+    primary: rgb(27, 27, 47),
+    primary-dark: rgb(18, 18, 32),
+    accent: #BC1B8B;
+);
+
+@function color($color){
+    @return map-get($colors, $color);
+};
+
 * {
     padding: 0;
     margin: 0;
@@ -12,7 +22,7 @@ html, body, .wrapper {
 }
 
 body {
-    background: linear-gradient(120deg, rgb(27, 27, 47), rgb(18, 18, 32));
+    background: linear-gradient(120deg, color(primary), color(primary-dark));
 }
 
 @keyframes play120 {
@@ -48,7 +58,7 @@ body {
 }
 
 h1, h2 {
-    color:  #BC1B8B;
+    color:  color(accent);
     text-transform: uppercase;
     text-align: center;
     font-size: 3.4rem;
