@@ -1,7 +1,8 @@
 $colors: (
     primary: rgb(27, 27, 47),
     primary-dark: rgb(18, 18, 32),
-    accent: #BC1B8B;
+    accent: #BC1B8B,
+    accent-dark: darken(#BC1B8B, 15%),
 );
 
 @function color($color){
@@ -25,6 +26,13 @@ body {
     background: linear-gradient(120deg, color(primary), color(primary-dark));
 }
 
+.header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 70%;
+}
+
 @keyframes play120 {
     0% {
       background-position: 0px 0px;
@@ -41,10 +49,6 @@ body {
     width: 362px;
     height: 400px;
     background-repeat: no-repeat;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
 }
 .heart-svg.play {
    animation-name: play120;
@@ -122,6 +126,66 @@ h2 {
     70% {
         opacity: 0;
     }
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    padding-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .btn {
+        color: color(primary-dark);
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: center;
+        background-color:rgba(255, 255, 255, 0.534);
+        width: fit-content;
+        padding: 1em;
+        border-radius: 10px;
+        border: none;
+    }
+
+    h3 {
+        color: color(accent);
+        font-size: 4rem;
+        animation: shadow 3s ease infinite alternate;
+    }
+
+}
+
+@keyframes shadow {
+    0% {
+        text-shadow:    8px 8px 32px color(accent-dark),
+        -8px -8px 32px color(accent-dark)
+    }
+
+    10% {
+        text-shadow: 2px 2px 8px color(accent-dark),
+        -2px -2px 8px color(accent-dark);
+    }
+
+    20% {
+        text-shadow: 8px 8px 32px color(accent-dark),
+        -8px -8px 32px color(accent-dark);
+    }
+
+    80% {
+        text-shadow: 2px 2px 8px color(accent-dark),
+        -2px -2px 8px color(accent-dark);
+    }
+
+    90% {
+        text-shadow:    8px 8px 32px color(accent-dark),
+        -8px -8px 32px color(accent-dark)
+    }
+
+
 }
 
   
